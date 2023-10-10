@@ -1,0 +1,67 @@
+.home
+    margin-top: 8.75rem
+    &__wrapper
+        display: flex
+        flex-direction: column
+        justify-content: center
+        align-items: center
+        text-align: center
+
+/* -------------------------------- HOME CATEGORY!! */
+.home__caption
+    display: flex
+    flex-direction: column
+
+    &-category
+        display: flex
+        align-items: center
+        justify-content: center
+    .category-wrapper
+        width: 188px
+        display: flex
+        align-items: center
+        position: relative
+
+    .category-event
+        padding-right: 30px
+        font-size: .7rem
+        font-weight: 700
+        line-height: 208%
+        color: var(--white)
+
+        z-index: 1
+        padding: $ui-step $ui-step * 4 $ui-step $ui-step * 4
+        background: #F9A38F
+        border-radius: $ui-step * 5
+    h3  
+        position: absolute
+        right: 0
+        z-index: 1
+        padding: $ui-step $ui-step * 5 $ui-step $ui-step * 8 
+
+        background: var(--white-1)
+        border-radius: $ui-step * 5
+
+        font-size: .8rem
+        font-weight: 700
+        color: var(--black-1)
+        line-height: 192%
+    /* -------------------------------- HOME TEXT !!! */
+    &-text
+        margin-top: .6rem
+
+        display: flex
+        flex-direction: column
+        row-gap: 2.4rem
+        align-items: center
+        text-align: center
+        h1
+            color: var(--default)
+            font-size: 6.9rem 
+            font-weight: 700
+            line-height: 100%
+        p
+            font-size: 1.3rem
+            font-weight: 500
+            line-height: 157%
+            max-width: 33rem

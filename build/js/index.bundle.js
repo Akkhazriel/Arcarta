@@ -1,0 +1,1 @@
+(()=>{"use strict";document.addEventListener("DOMContentLoaded",(()=>{const e=document.querySelector("nav[data-header-nav]"),t=document.body,c=document.querySelector(".nav__menu");c.addEventListener("click",(()=>{c.classList.toggle("active"),e.classList.toggle("active"),t.classList.toggle("no-scroll")}))}))})();
