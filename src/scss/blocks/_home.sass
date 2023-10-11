@@ -122,8 +122,17 @@
 
 
 // MEDIA
+@media screen and ( max-width: 999px )
+    .home__caption
+        &-category
+            .category-title
+                padding: $ui-step $ui-step * 6 $ui-step $ui-step * 6.5
+
 @media screen and ( max-width: 499px )
     .home__caption
+        &-category
+            .category-title
+                padding: $ui-step $ui-step * 3 $ui-step $ui-step * 4
         &-text
             margin-top: 2.5rem
             h1
@@ -131,6 +140,9 @@
             p
                 font-size: .9rem
                 max-width: 25rem
+
+        .home__caption-button
+            max-width: 12rem
 
 @media screen and ( max-width: 350px )
     .home__caption
