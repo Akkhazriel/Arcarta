@@ -1,5 +1,5 @@
 .home
-    margin-top: 8.75rem
+    margin-top: 10rem
     &__wrapper
         display: flex
         flex-direction: column
@@ -15,37 +15,35 @@
     &-category
         display: flex
         align-items: center
-        justify-content: center
-    .category-wrapper
-        width: 188px
-        display: flex
-        align-items: center
+        justify-content: space-between
+        margin: 0 auto
+        width: 14.3rem
         position: relative
-
     .category-event
-        padding-right: 30px
-        font-size: .7rem
-        font-weight: 700
-        line-height: 208%
-        color: var(--white)
-
+        position: absolute
+        left: 0
+        padding: $ui-step $ui-step * 5 $ui-step $ui-step * 2
         z-index: 1
-        padding: $ui-step $ui-step * 4 $ui-step $ui-step * 4
+
         background: #F9A38F
         border-radius: $ui-step * 5
-    h3  
+
+        color: var(--white)
+        font-weight: 700
+        font-size: .8rem
+    .category-title
+        z-index: 2
         position: absolute
         right: 0
-        z-index: 1
-        padding: $ui-step $ui-step * 5 $ui-step $ui-step * 8 
+        padding: $ui-step $ui-step * 8 $ui-step $ui-step * 6.5
 
         background: var(--white-1)
         border-radius: $ui-step * 5
 
-        font-size: .8rem
-        font-weight: 700
         color: var(--black-1)
-        line-height: 192%
+        font-weight: 700
+        font-size: .8rem
+
     /* -------------------------------- HOME TEXT !!! */
     &-text
         margin-top: .6rem
@@ -65,3 +63,79 @@
             font-weight: 500
             line-height: 157%
             max-width: 33rem
+
+    // ----------------------- Home BUTTON!
+    .home__caption-button
+        margin-top: 1.5rem
+        padding: $ui-step * 3 $ui-step * 8
+        max-width: 10rem
+        background: var(--accent)
+        border-radius: 3rem
+        align-self: center
+
+        font-size: 1rem
+        color: var(--white)
+        font-weight: 700
+
+// ----------------- HOME SPONSORS SCROLLERS
+.home-sponsors
+    margin-top: 3rem
+    .sponsors__container
+        max-width: 55rem
+    .sponsors__inner
+        display: flex
+        flex-wrap: wrap
+        padding-block: 1rem
+        align-items: center
+        column-gap: 1rem
+        img
+            width: 15
+    // IF HAVE ATTRIBUTE 
+    .sponsors__container[data-animated='true']
+        overflow: hidden
+
+        -webkit-mask: linear-gradient(90deg, transparent, #ffffff 20%, #FFFFFF 80%, transparent)
+        mask: linear-gradient(90deg, transparent, #ffffff 20%, #FFFFFF 80%, transparent)
+
+        .sponsors__inner
+            align-items: center
+            width: max-content
+            flex-wrap: nowrap
+            animation: scroller var(--_animation-duration, 40s) var(--_animtaion-direction, forwards) linear infinite
+
+@keyframes scroller
+    to
+        transform: translate(calc(-50% - .5rem))
+
+// -------------------- Scroll Down
+.home-continueLink
+    position: relative
+    margin-top: 2.5rem
+    display: flex
+    column-gap: $ui-step * 2
+
+    color: var(--accent)
+    font-weight: 700
+    font-size: 1rem
+    line-height: 125%
+
+
+// MEDIA
+@media screen and ( max-width: 499px )
+    .home__caption
+        &-text
+            h1
+                font-size: 4rem
+            p
+                font-size: .9rem
+                max-width: 25rem
+
+@media screen and ( max-width: 350px )
+    .home__caption
+        &-text
+            margin-top: 1.5rem
+            h1
+                font-size: 3.5rem
+            p
+                max-width: 20rem
+                font-size: .6rem
