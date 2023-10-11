@@ -81,7 +81,7 @@
 .home-sponsors
     margin-top: 3rem
     .sponsors__container
-        max-width: 55rem
+        max-width: 70vw
     .sponsors__inner
         display: flex
         flex-wrap: wrap
@@ -113,6 +113,7 @@
     margin-top: 2.5rem
     display: flex
     column-gap: $ui-step * 2
+    align-items: center
 
     color: var(--accent)
     font-weight: 700
@@ -124,6 +125,7 @@
 @media screen and ( max-width: 499px )
     .home__caption
         &-text
+            margin-top: 2.5rem
             h1
                 font-size: 4rem
             p
@@ -133,9 +135,11 @@
 @media screen and ( max-width: 350px )
     .home__caption
         &-text
-            margin-top: 1.5rem
+            margin-top: 2.5rem
             h1
                 font-size: 3.5rem
             p
                 max-width: 20rem
                 font-size: .6rem
+        .home__caption-button
+            max-width: 13rem
