@@ -1,0 +1,72 @@
+.form
+    padding-top: 8.4rem
+    background-color: var(--white)
+    &__wrapper
+        display: flex
+        background: #FAF7F3
+        column-gap: 3rem
+        align-items: center
+        max-width: 100%
+        padding: $ui-step * 11 $ui-step * 15 $ui-step * 11 $ui-step * 15
+        border-radius: $ui-step * 3
+
+.form__field
+    display: flex
+    flex-direction: column
+    &-title
+        color: var(--black)
+        font-size: 2.5rem
+        font-weight: 700
+        line-height: 3.3rem
+    &-desc
+        margin-top: 1.5rem
+
+        max-width: 34rem
+
+        color: var(--default)
+        font-size: 1.8rem
+        font-weight: 500 
+        line-height: 2rem
+
+.form__field-action
+    margin-top: 2rem
+    display: flex
+    max-width: 24rem
+    align-items: center
+    background: var(--white)
+    border-radius: $ui-step * 3
+    box-shadow: 0px 1px 12px 0px rgba(0, 0, 0, 0.10)
+    padding: $ui-step * 3 $ui-step * 2 $ui-step * 3 $ui-step * 8
+    justify-content: space-between
+    .form-input
+        font-size: 1.3rem
+        font-weight: 500
+        color: rgba(0, 0, 0, 0.45)
+        &:focus
+            transition: .3s linear
+        &:focus::selection
+            background: var(--accent)
+        &::selection
+            background: var(--accent)
+        &:hover
+            color: var(--accent)
+            transition: .3s linear
+            -webkit-transition: all -webkit-transform .3s linear
+
+// Media
+@media screen and ( max-width: 699px )
+    .form
+        &__wrapper
+            flex-direction: column
+            text-align: center
+
+@media screen and ( max-width: 399px )
+    .form__field
+        align-items: center
+        &-desc
+            font-size: 1.2rem
+
+    .form__field-action
+        .form-btn
+            width: 2rem
+    
