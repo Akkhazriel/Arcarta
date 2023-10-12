@@ -19,7 +19,23 @@
         margin: 0 auto
         width: 14.3rem
         position: relative
+        transition: .3s linear
+        cursor: pointer
+        @media (hover: hover) and (pointer: fine)
+            &:hover
+                width: 15rem
+                transition: .3s linear
+            &:hover .category-title
+                transition: .3s linear
+                padding: $ui-step $ui-step * 15 $ui-step $ui-step * 12.5
+            &:hover .category-event
+                transition: .1s linear
+                z-index: 3
+                color: #F9A38F
+                background: var(--white-1)
+
     .category-event
+        transition: .1s linear
         position: absolute
         left: 0
         padding: $ui-step $ui-step * 5 $ui-step $ui-step * 2
@@ -32,6 +48,7 @@
         font-weight: 700
         font-size: .8rem
     .category-title
+        transition: .3s linear
         z-index: 2
         position: absolute
         right: 0
@@ -76,6 +93,7 @@
         font-size: 1rem
         color: var(--white)
         font-weight: 700
+        
 
 // ----------------- HOME SPONSORS SCROLLERS
 .home-sponsors
